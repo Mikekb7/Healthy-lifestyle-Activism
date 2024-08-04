@@ -1,0 +1,212 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: beige;
+  background-image: url('');
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #014101;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  color: navy;
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h3 {
+  text-align: center;
+  font-size: 25px;
+  color: #0e0e7c;
+}
+
+p {
+  color: #1b1bb1;
+}
+
+a {
+  color: brown;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:active {
+  color: lightblue;
+}
+
+.navbar {
+  list-style-type: none;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  margin: 20px;
+}
+
+.navbar li {
+  float: left;
+  margin: 0 10px;
+}
+
+.navbar li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 30px;
+  text-align: center;
+}
+
+.navbar li a:hover {
+  background-color: green;
+}
+
+.button {
+  background-color: lightblue;
+  border: none;
+  color: lightblue;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  padding-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.header-item:nth-of-type(1) {
+  float: left;
+  width: 90%;
+}
+
+.header-item:nth-of-type(2) {
+  float: right;
+  width: 10%;
+}
+
+#header-img {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: lightblue;
+  text-align: center;
+}
+.dark-mode {
+  background-color: black;
+  color: lightblue;
+}
+
+.dark-mode > .navbar > ul > li > a{
+  color: aliceblue;
+}
+
+body > .navbar > ul > li {
+  list-style-type: none;
+}
+
+.dark-mode > .navbar > ul > li > a:hover{
+  background-color: orange;
+}
+
+.petition-container{
+  display : flex;
+  flex-direction: row;
+  gap : 20px;
+  width : 100;
+  padding-bottom : 50px;
+}
+
+.petition-para{
+  width  : 55%;
+  padding-right : 10px;
+}
+
+.signatures {
+  width : 45%;
+  padding-right : 10px;
+}
+
+.error {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  background:pink;
+}
+
+.revealable{
+  position : relative;
+  transform : translateY(150px);
+  opacity : 0;
+  transition : all 2s ease;
+}
+
+.active{
+  transform : translateY(0px);
+  opacity : 1;
+}
+
+/* the modal that covers the background and prevents user interactions */
+.modal {
+  display: none; /* hides the modal from view by default*/
+  position: fixed; /* keeps the modal in one place */
+  z-index: 2; /* positions the modal on top of all other elements on the screen */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.4); /* 40% opacity black - other elements can still be seen */
+  flex-direction: column; /* these flexbox rules center the content on the screen */
+  align-items: center;
+  justify-content: center;
+}
+
+/* box that contains all the content and images */
+.modal-content {
+  background-color: lightsteelblue; /* update the colors and font sizes as you like */
+  color: black;
+  text-align: center;
+  font-size: 3rem;
+  display: flex; /* adds flexbox to center all items */
+  justify-content: center;
+  align-items: center;
+}
+
+#thanks-modal-content {
+  width: 20rem; /* sets a default width for the text container */
+}
+
+#modal-text-container {
+  display: flex; /* adds flexbox to center the text and buttons (stretch feature) */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
